@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Aplikasi chat</title>
+</head>
+
+<body>
+    <div id="hasil" style="width: 500px; height: 600px; border: 1px solid black;"></div>
+    <div style="display: flex;">
+        <input id="masukan" type="text" size="50">
+        <button onclick="tampil()">kirim</button>
+    </div>
+    <script>
+        let hasil = document.getElementById("hasil")
+        let input = document.getElementById("masukan")
+        let hasilInput = ""
+
+
+        function tampil() {
+            hasilInput = hasilInput + input.value + "<br>"
+            hasil.innerHTML = hasilInput
+            input.value = ""
+        }
+    </script>
+
+</body>
+
+</html>
